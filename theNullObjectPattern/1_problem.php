@@ -82,3 +82,31 @@ echo "\n\n";
 // Клиентский код (если пользователь отсутствует)
 $account = new Account(4, new TaxesRepository());
 echo $account->printTaxes();
+
+/*
+Вывод консоли
+
+DEBUG===>                                                                                                
+object(Istlian\DesignPatterns\NullObject\UserTaxes)#3 (3) {                                            
+	["account":protected]=>                                                                                
+  string(6) "User#1"                                                                                     
+  ["income_tax":protected]=>                                                                             
+  int(5)                                                                                                 
+  ["property_tax":protected]=>                                                                           
+  int(10)                                                                                                
+}
+<===DEBUG
+Taxes for User#1.
+IncomeTax: 5 RUB, PropertyTax: 10 RUB
+
+
+DEBUG===>
+NULL
+<===DEBUG
+Fatal error: Uncaught Error: Call to a member function getUserTaxes() on null in
+design_patterns\theNullObjectPattern\1_problem.php:71                                            
+
+Stack trace: #0 \design_patterns\theNullObjectPattern\1_problem.php(84): 
+Istlian\DesignPatterns\NullObject\Account->printTaxes()                                          #1 {main}                                                                                           thrown in \design_patterns\theNullObjectPattern\1_problem.php on line 71
+ 
+*/  

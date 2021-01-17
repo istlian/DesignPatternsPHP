@@ -85,3 +85,25 @@ echo $account->printTaxes();
 echo "\n\n";
 $account = new Account(4, new TaxesRepository());
 echo $account->printTaxes();
+
+/*
+Вывод консоли
+
+DEBUG===>                                                   
+object(Istlian\DesignPatterns\NullObject\UserTaxes)#3 (3) { 
+  ["account":protected]=>                                   
+  string(6) "User#1"                                        
+  ["income_tax":protected]=>                                
+  int(5)                                                    
+  ["property_tax":protected]=>                              
+  int(10)                                                   
+}                                                           
+<===DEBUG                                                   
+Taxes for User#1.                                           
+IncomeTax: 5 RUB, PropertyTax: 10 RUB                       
+                                                            
+                                                            
+DEBUG===>                                                   
+NULL                                                        
+<===DEBUG 
+*/                                                  
